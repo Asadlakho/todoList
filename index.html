@@ -7,6 +7,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/b2b731f521.js" crossorigin="anonymous"></script>
   <style>
+    body {
+      overflow: hidden;
+    }
+
     #list li {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(8px);
@@ -43,6 +47,7 @@
   <h1 class="text-3xl font-bold text-white bg-gradient-to-r from-blue-600 to-sky-500 px-10 py-3 rounded-2xl shadow-xl mb-8 flex items-center gap-2">
     <i class="fa-solid fa-list-check"></i> Todo <span style="color: beige;">List</span>
   </h1>
+
   <div class="flex w-full max-w-md gap-3 mb-4">
     <input type="text" id="task" placeholder="Enter your data"
            class="flex-1 px-4 py-2 rounded-lg outline-none bg-gray-100 focus:ring-2 focus:ring-sky-500 text-gray-800 placeholder-gray-500 shadow-md">
@@ -51,23 +56,19 @@
             <i class="fa-solid fa-plus"></i> Add Data
     </button>
   </div>
+
   <ul id="list" class="mt-6 space-y-3 w-full max-w-md text-left"></ul>
-  
-  
-  
+
   <script>
-   const add=()=>{
-    let task=document.getElementById("task").value;
-    if(task==="")return;
-    let listItem=document.createElement("li")
-    listItem.innerHTML=task +" <button onclick='this.parentElement.remove()'><i class='fa-solid fa-trash'></i> Remove</button>"
-    document.getElementById("list").append(listItem)
-    document.getElementById("task").value=""
-   }
-  
+    const add = () => {
+      let task = document.getElementById("task").value;
+      if (task === "") return;
+      let listItem = document.createElement("li");
+      listItem.innerHTML = task + " <button onclick='this.parentElement.remove()'><i class=\"fa-solid fa-trash\"></i> Remove</button>";
+      document.getElementById("list").append(listItem);
+      document.getElementById("task").value = "";
+    }
   </script>
-
-
 
 </body>
 </html>
