@@ -22,3 +22,6 @@ This mini project allows users to add and remove tasks easily with a clean, mode
 .Tailwind CSS
 
 .JavaScript (DOM Manipulation)
+
+🚀 Live Demo :
+🔗 https://asadlakho.github.io/todoList/
