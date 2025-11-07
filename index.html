@@ -84,6 +84,18 @@
         font-size: 0.7rem;
       }
     }
+    @media (max-width: 640px) {
+  .remove-btn {
+    width: auto;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+  }
+
+  .remove-btn i {
+    font-size: 0.7rem;
+  }
+}
+
   </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-blue-900 via-sky-900 to-gray-900 flex flex-col items-center justify-center p-6">
@@ -108,7 +120,7 @@
       let task = document.getElementById("task").value;
       if (task === "") return;
       let listItem = document.createElement("li");
-      listItem.innerHTML = task + " <button onclick='this.parentElement.remove()'><i class=\"fa-solid fa-trash\"></i> Remove</button>";
+listItem.innerHTML = task + " <button onclick='this.parentElement.remove()' class='remove-btn'><i class=\"fa-solid fa-trash\"></i> Remove</button>";
       document.getElementById("list").append(listItem);
       document.getElementById("task").value = "";
     }
